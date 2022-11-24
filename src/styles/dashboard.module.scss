@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: 290px auto;
+}
+
+
+@media (max-width: 1280px) {
+    .container{
+        display: block;
+    }
+}
