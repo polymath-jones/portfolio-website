@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
 import useScreenSize from "../../hooks/useScreenSize";
-import SearchBar from "../form/search-bar";
+import SearchBar from "../common/form/search-bar";
 
 interface Props {
   openSideNav: VoidFunction;

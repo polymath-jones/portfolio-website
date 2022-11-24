@@ -1,4 +1,4 @@
-import { UserStatistics } from "../../../pages/dashboard/users";
+import { UserStatistics } from "../../../../pages/dashboard/users";
 
 interface Props {
   data: UserStatistics;

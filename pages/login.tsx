@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
 import router from "next/router";
-import Button from "../src/components/form/button";
-import InputField from "../src/components/form/input-field";
-import PasswordField from "../src/components/form/password-field";
+import Button from "../src/components/common/form/button";
+import InputField from "../src/components/common/form/input-field";
+import PasswordField from "../src/components/common/form/password-field";
 import styles from "../src/styles/login.module.scss";
 
 export default function LoginPage() {
@@ -49,7 +49,12 @@ export default function LoginPage() {
         <a href="" className="text-primary-400 text-sm font-medium mt-6 block">
           FORGOT PASSWORD?
         </a>
-        <Button onClick={() => router.push(`/dashboard/users/`)} className="mt-7.5" color="primary" variant="filled">
+        <Button
+          onClick={() => router.push(`/dashboard/users/`)}
+          className="mt-7.5"
+          color="primary"
+          variant="filled"
+        >
           LOG IN
         </Button>
       </div>

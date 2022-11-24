@@ -1,6 +1,6 @@
 import router from "next/router";
-import { User } from "../../../pages/dashboard/users";
-import Dropdown, { DropdownItem } from "./dropdown";
+import { User } from "../../../../pages/dashboard/users";
+import Dropdown, { DropdownItem } from "../../common/dropdown";
 
 interface Props {
   users: User[];
@@ -52,13 +52,16 @@ const UserTable: React.FC<Props> = ({ users, openFilterPane }) => {
           const color = statusColors[randStatus];
 
           return (
-            <tr className="cursor-pointer" onClick={ () => router.push(`/dashboard/users/${user.id}`)}>
+            <tr
+              className="cursor-pointer"
+              onClick={() => router.push(`/dashboard/users/${user.id}`)}
+            >
               <td>{user.orgName} </td>
               <td>{user.userName} </td>
               <td>{user.email} </td>
               <td>{user.phoneNumber} </td>
               <td>{new Date(user.createdAt).toDateString()} </td>
-              <td onClick={(e)=> e.stopPropagation()}>
+              <td onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2.5">
                   <div className="w-25">
                     <span
@@ -71,7 +74,8 @@ const UserTable: React.FC<Props> = ({ users, openFilterPane }) => {
                     items={[
                       {
                         text: "View Details",
-                        onClick: () => router.push(`/dashboard/users/${user.id}`),
+                        onClick: () =>
+                          router.push(`/dashboard/users/${user.id}`),
                         icon:
                           // prettier-ignore
                           <svg width="16" height="12" viewBox="0 0 16 12" fill="none" >

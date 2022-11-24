@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode, useEffect, useState } from "react";
 import DashboardLayout from "../../../src/components/layouts/dashboard";
-import UserStats from "../../../src/components/ui/user-statistics";
-import UserTable from "../../../src/components/ui/user-table";
+import UserStats from "../../../src/components/dashboard/user/user-statistics";
+import UserTable from "../../../src/components/dashboard/user/user-table";
 
 const UsersPage = () => {
   const [users, setUsers] = useState<User[]>([]);
