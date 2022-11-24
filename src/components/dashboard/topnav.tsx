@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import useClickOutside from "../../hooks/useClickOutside";
 import useScreenSize from "../../hooks/useScreenSize";
-import SearchBar from "../common/form/search-bar";
+import SearchBar from "../common/search-bar";
 
 interface Props {
   openSideNav: VoidFunction;
@@ -15,7 +15,7 @@ const TopNav: React.FC<Props> = ({ openSideNav }) => {
     setShowFullSearch(false);
   });
   return (
-    <div className="py-7.5 flex items-center justify-between w-full md:pr-12.5">
+    <div className="py-7.5 flex items-center justify-between w-full xl:pr-12.5">
       <div className="flex items-center gap-2.5 md:gap-5">
         <button
           onClick={openSideNav}
@@ -36,7 +36,7 @@ const TopNav: React.FC<Props> = ({ openSideNav }) => {
         </button>
         <div
           ref={searchContainer}
-          className={`absolute sm:relative w-full mr-4 md:mr-0 top-0 right-0 py-4 sm:py-0 sm:border-none border-b border-secondary-100 border-opacity-20  bg-white ${
+          className={`absolute sm:relative w-full top-0 right-0 py-4 sm:py-0 sm:border-none border-b border-secondary-100 border-opacity-20  bg-white ${
             !showFullSearch && isSmall && "translate-y-[-100%]"
           }`}
         >
