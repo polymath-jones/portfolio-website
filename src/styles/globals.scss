@@ -11,6 +11,7 @@
 
 html,
 body {
+  background-color: white;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -38,10 +39,11 @@ h6 {
   font-family: "Work Sans";
 }
 
-td,th{
+td,
+th {
   padding: 22.5px 0px;
   font-size: 14px;
-  color:#545f7d;
+  color: #545f7d;
 }
 
 .input-field {
