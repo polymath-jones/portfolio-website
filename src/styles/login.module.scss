@@ -1,0 +1,18 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 100px;
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    display: block;
+    padding: 60px 40px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    display: block;
+    padding: 40px 20px;
+  }
+}
