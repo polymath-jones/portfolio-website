@@ -1,5 +1,5 @@
 import router from "next/router";
-import { User } from "../../../../pages/dashboard/users";
+import { User } from "../../../utils/interfaces";
 import Dropdown, { DropdownItem } from "../../common/dropdown";
 
 interface Props {

@@ -1,9 +1,9 @@
 import router from "next/router";
 import { useEffect, useState } from "react";
-import { User } from ".";
 import Button from "../../../src/components/common/form/button";
 import DashboardLayout from "../../../src/components/layouts/dashboard";
 import Tabs from "../../../src/components/common/tabs";
+import { User } from "../../../src/utils/interfaces";
 
 const UsersDetailsPage = () => {
   const [user, setUser] = useState<User>();

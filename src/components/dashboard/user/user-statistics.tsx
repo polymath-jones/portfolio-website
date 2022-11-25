@@ -1,11 +1,30 @@
-import { UserStatistics } from "../../../../pages/dashboard/users";
+import { UserStatistics } from "../../../utils/interfaces";
 
 interface Props {
   data: UserStatistics;
 }
 
 const UserStats: React.FC<Props> = ({ data }) => {
-  const stats = [
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6.25 w-full ">
+      {getStatsData(data).map((stat, index) => (
+        <div key={index} className="flex-1 sm:py-5 md:px-7.5">
+          {stat.icon}
+          <span className="mt-3.5 text-sm text-secondary-100 font-medium">
+            {stat.title}{" "}
+          </span>
+          <p className="mt-3 leading-none font-bold text-2xl text-secondary-400">
+            {stat.value}{" "}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+};
+export default UserStats;
+
+const getStatsData = (data: UserStatistics) => {
+  return [
     {
       title: "USERS",
       value: data.users,
@@ -75,21 +94,4 @@ const UserStats: React.FC<Props> = ({ data }) => {
         </svg>,
     },
   ];
-
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6.25 w-full ">
-      {stats.map((stat, index) => (
-        <div key={index} className="flex-1 sm:py-5 md:px-7.5">
-          {stat.icon}
-          <span className="mt-3.5 text-sm text-secondary-100 font-medium">
-            {stat.title}{" "}
-          </span>
-          <p className="mt-3 leading-none font-bold text-2xl text-secondary-400">
-            {stat.value}{" "}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
 };
-export default UserStats;
