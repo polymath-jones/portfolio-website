@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import DashboardLayout from "../../../src/components/layouts/dashboard";
 import UserStats from "../../../src/components/dashboard/user/user-statistics";
-import UserTable from "../../../src/components/dashboard/user/user-table";
+import ElectionsTable from "../../../src/components/dashboard/user/user-table";
 import { User, UserStatistics } from "../../../src/utils/interfaces";
 import { Paginator } from "../../../src/components/common/paginator";
 
@@ -69,15 +69,18 @@ const UsersPage = () => {
         </div>
         <div className="h-[400px]  overflow-auto">
           <div className="min-w-[1024px]">
-            <UserTable users={filteredUsers} openFilterPane={() => null} />
+            <ElectionsTable
+              elections={filteredUsers}
+              openFilterPane={() => null}
+            />
           </div>
         </div>
         <div className="flex md:flex-row flex-col items-center justify-between mt-10 gap-2.5">
           <span className="text-sm text-secondary-100">
-            Showing{" "}
+            Showing
             <span className="inline-block px-2 py-1 rounded-md text-secondary-400 font-medium bg-secondary-100 bg-opacity-20">
               {currentPage * PER_PAGE}
-            </span>{" "}
+            </span>
             out of {users.length}
           </span>
           <Paginator {...{ currentPage, totalPages, setCurrentPage }} />

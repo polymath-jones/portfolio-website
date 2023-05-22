@@ -13,12 +13,12 @@ export default function Home() {
       </Head>
       <div className="w-full h-screen flex flex-col items-center justify-center">
         <Image
-          src="/svgs/logo.svg"
+          src="/imgs/logo.png"
           alt="lendsqr Logo"
           width={175}
           height={36}
         />
-        <div className="w-40">
+        <div className="w-80 flex gap-5">
           <Button
             onClick={() => router.push(`/login`)}
             className="mt-7.5"
@@ -26,7 +26,17 @@ export default function Home() {
             variant="filled"
           >
             LOG IN
+</Button>
+          <Button
+            onClick={() => router.push(`/register`)}
+            className="mt-7.5"
+            color="primary"
+            variant="outlined"
+          >
+            Register
           </Button>
+
+
         </div>
       </div>
     </div>

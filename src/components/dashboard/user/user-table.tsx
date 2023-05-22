@@ -3,17 +3,20 @@ import { User } from "../../../utils/interfaces";
 import Dropdown, { DropdownItem } from "../../common/dropdown";
 
 interface Props {
-  users: User[];
+  elections: User[];
   openFilterPane: VoidFunction;
 }
 
-const UserTable: React.FC<Props> = ({ users, openFilterPane }) => {
+const ElectionsTable: React.FC<Props> = ({
+ elections,
+  openFilterPane,
+}) => {
   const tableHeaders = [
-    "organization",
-    "Username",
-    "Email",
-    "Phone number",
-    "Date joined",
+    "Title",
+    "Scope",
+    "Scope Value",
+    "Candidates",
+    "Registered",
     "Status",
   ];
 
@@ -47,20 +50,20 @@ const UserTable: React.FC<Props> = ({ users, openFilterPane }) => {
       </thead>
 
       <tbody>
-        {users.map((user) => {
+        {elections.map((election) => {
           const randStatus = statuses[Math.floor(Math.random() * 3)];
           const color = statusColors[randStatus];
 
           return (
             <tr
               className="cursor-pointer"
-              onClick={() => router.push(`/dashboard/users/${user.id}`)}
+              onClick={() => router.push(`/dashboard/users/${election.id}`)}
             >
-              <td>{user.orgName} </td>
-              <td>{user.userName} </td>
-              <td>{user.email} </td>
-              <td>{user.phoneNumber} </td>
-              <td>{new Date(user.createdAt).toDateString()} </td>
+              <td>{election.orgName} </td>
+              <td>{election.userName} </td>
+              <td>{election.email} </td>
+              <td>{election.phoneNumber} </td>
+              <td>{new Date(election.createdAt).toDateString()} </td>
               <td onClick={(e) => e.stopPropagation()}>
                 <div className="flex items-center gap-2.5">
                   <div className="w-25">
@@ -75,7 +78,7 @@ const UserTable: React.FC<Props> = ({ users, openFilterPane }) => {
                       {
                         text: "View Details",
                         onClick: () =>
-                          router.push(`/dashboard/users/${user.id}`),
+                          router.push(`/dashboard/users/${election.id}`),
                         icon:
                           // prettier-ignore
                           <svg width="16" height="12" viewBox="0 0 16 12" fill="none" >
@@ -133,4 +136,4 @@ const UserTable: React.FC<Props> = ({ users, openFilterPane }) => {
     </table>
   );
 };
-export default UserTable;
+export default ElectionsTable;

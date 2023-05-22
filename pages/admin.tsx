@@ -17,12 +17,12 @@ export default function AdminPage() {
   const [errorText,setErrorText] = useState<string|undefined>(undefined);
   const form = useFormik({
     initialValues: {
-      reg_no: "",
+      username: "",
       password: "",
     },
     validationSchema: undefined,
     onSubmit: async (values) => {
-      const url = "http://127.0.0.1:8080/user/login";
+      const url = "http://127.0.0.1:8080/user/admin_login";
       const response = await window.fetch(url, {
         method: "POST",
         credentials: "include",
@@ -32,10 +32,10 @@ export default function AdminPage() {
         body: JSON.stringify(values),
       });
       if(response.ok){
-        const data = await  response.json();
-        localStorage.setItem("user_token",data.token);
-        localStorage.setItem("me",JSON.stringify(data.me) );
-        router.push(`/dashboard/voter/`)
+
+        const data  = await response.json()
+        localStorage.setItem("admin_token",data.token);
+        router.push(`/dashboard/admin/`)
         
       }else{
         setErrorText("Invalid credentials");
@@ -76,13 +76,13 @@ export default function AdminPage() {
         />
         <ErrorLabel perm error={errorText} />
         <h1 className=" text-primary-400 text-4xl lg:text-[40px] font-bold">
-          Voter Login
+          Admin Login
         </h1>
         <p className="text-secondary-100 my-1 lg:mt-2.5">
           Enter details to login.
         </p>
         <form onSubmit={form.handleSubmit}>
-          <InputField label="Reg no" {...getFieldvalues("reg_no", form)} />
+          <InputField label="username" {...getFieldvalues("username", form)} />
           <PasswordField
             label="Password"
             {...getFieldvalues("password", form)}

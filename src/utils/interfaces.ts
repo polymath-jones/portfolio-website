@@ -47,3 +47,14 @@ export interface User {
   };
   id: string;
 }
+
+export interface Election {
+  id: string;
+  title: string;
+  scope: string;
+  scope_value: string;
+  candidates: string[];
+  voters: string[];
+  status: string;
+  blockchain: string | undefined;
+}

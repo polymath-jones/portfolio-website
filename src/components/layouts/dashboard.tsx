@@ -33,7 +33,6 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
           <SideNav />
         </div>
       </div>
-
       <div className=" h-screen overflow-y-auto px-5 mx-0 md:px-10 xl:px-0 xl:mx-10">
         <div className="sticky w-full top-0 bg-white z-30">
           <TopNav openSideNav={() => setShowNav(true)} />
