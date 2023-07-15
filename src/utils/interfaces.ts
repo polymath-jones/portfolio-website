@@ -24,6 +24,6 @@ export const mobileUrls = [
   "https://res.cloudinary.com/swapng/image/upload/v1689422486/Mobile%20designs/ubycqvqzheggyitkobln.png",
   "https://res.cloudinary.com/swapng/image/upload/v1689422492/Mobile%20designs/n3in3ilkjhzvxdmvxjax.png",
   "https://res.cloudinary.com/swapng/image/upload/v1689422491/Mobile%20designs/ftjkrdjgowt3jq2prff3.png",
-  "https://res.cloudinary.com/swapng/image/upload/v1689422495/Mobile%20designs/flduddwnqigfapxffjg8.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689430227/Compress_20230715_125041_1124_krjzqz.jpg",
   "https://res.cloudinary.com/swapng/image/upload/v1689422490/Mobile%20designs/lmz6xtdeeyfxk6rycr9r.png",
 ];
