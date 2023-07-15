@@ -17,7 +17,7 @@ export default function Design() {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   useEffect(() => {
-    Scrollbar.initAll();
+    // Scrollbar.initAll();
   }, []);
 
   const scrollTo = (ref: any) => {
