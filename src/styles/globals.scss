@@ -1,4 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-weight: 400 500;
+  src: url(../assets/fonts/CabinetGrotesk-Regular.otf) format("opentype"),
+    url(../assets/fonts/CabinetGrotesk-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica";
+  font-weight: 400 500;
+  src: url(../assets/fonts/Helvetica.ttf) format("truetype"),
+    url(../assets/fonts/Helvetica-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Cyrene";
+  font-weight: 400;
+  src: url(../assets/fonts/Cyrene-Regular.otf) format("opentype");
+}
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -36,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Work Sans";
+  font-family: "Cyrene";
 }
 
 td,
@@ -44,6 +63,23 @@ th {
   padding: 22.5px 0px;
   font-size: 14px;
   color: #545f7d;
+}
+
+input {
+  font-family: "Helvetica";
+  background-color: black;
+  outline: solid 2px rgba(255, 255, 255, 0.404);
+  border-radius: 999px;
+  color: white;
+  width: 100%;
+}
+input[type="text"]:focus {
+  color: white;
+  outline: solid 2px white;
+}
+input::placeholder {
+  color: rgba(255, 255, 255, 0.322);
+  opacity: 1; /* Firefox */
 }
 
 .input-field {
@@ -82,7 +118,6 @@ th {
   }
 
   &:focus {
-    border-color: #1A8224 !important;
+    border-color: #1a8224 !important;
   }
 }
-

@@ -4,8 +4,10 @@ import styles from "../../styles/dashboard.module.scss";
 import SideNav from "../dashboard/sidenav.";
 import TopNav from "../dashboard/topnav";
 
-interface Props extends React.PropsWithChildren {}
-const DashboardLayout: React.FC<Props> = ({ children }) => {
+interface Props extends React.PropsWithChildren {
+  isadmin?: boolean;
+}
+const DashboardLayout: React.FC<Props> = ({ children,isadmin }) => {
   const [showNav, setShowNav] = useState(false);
   const { width } = useScreenSize();
   const isSmall = width <= 1280;
@@ -35,7 +37,7 @@ const DashboardLayout: React.FC<Props> = ({ children }) => {
       </div>
       <div className=" h-screen overflow-y-auto px-5 mx-0 md:px-10 xl:px-0 xl:mx-10">
         <div className="sticky w-full top-0 bg-white z-30">
-          <TopNav openSideNav={() => setShowNav(true)} />
+          <TopNav admin={isadmin} openSideNav={() => setShowNav(true)} />
         </div>
         <div>{children}</div>
       </div>

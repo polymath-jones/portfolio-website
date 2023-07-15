@@ -4,8 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      body: ["Work Sans", "Open Sans"],
-      display: ["Work Sans", "Open Sans"],
+      body: ["Helvetica", "Open Sans"],
+      display: ["CabinetGrotesk", "Open Sans"],
+      display2: ["Cyrene", "Open Sans"],
     },
     container: {
       center: true,

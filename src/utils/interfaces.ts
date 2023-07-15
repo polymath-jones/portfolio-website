@@ -1,60 +1,29 @@
-export interface UserStatistics {
-  users: number;
-  active_users: number;
-  users_with_loans: number;
-  users_with_savings: number;
-}
-
-export interface User {
-  createdAt: string;
-  orgName: string;
-  userName: string;
-  email: string;
-  phoneNumber: string;
-  lastActiveDate: string;
-  profile: {
-    firstName: string;
-    lastName: string;
-    phoneNumber: string;
-    avatar: string;
-    gender: string;
-    bvn: string;
-    address: string;
-    currency: string;
-  };
-  guarantor: {
-    firstName: string;
-    lastName: string;
-    phoneNumber: string;
-    gender: string;
-    address: string;
-  };
-  accountBalance: string;
-  accountNumber: string;
-  socials: {
-    facebook: string;
-    instagram: string;
-    twitter: string;
-  };
-  education: {
-    level: string;
-    employmentStatus: string;
-    sector: string;
-    duration: string;
-    officeEmail: string;
-    monthlyIncome: string[];
-    loanRepayment: string;
-  };
-  id: string;
-}
-
-export interface Election {
-  id: string;
-  title: string;
-  scope: string;
-  scope_value: string;
-  candidates: string[];
-  voters: string[];
-  status: string;
-  blockchain: string | undefined;
-}
+export const desktopUrls = [
+  "https://res.cloudinary.com/swapng/image/upload/v1689422593/Desktop%20designs/hglagedmxg0ywxek9wf4.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422592/Desktop%20designs/qazincjazsmveukuhqmo.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422595/Desktop%20designs/jdngv2akjhpvojwdpsih.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/xpvtagwdwd4lvz899jls.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/xpvtagwdwd4lvz899jls.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/axksqgytlxvgr5huckhl.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422593/Desktop%20designs/woz2selczohr54mjujxd.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/reg83ua6avuruioxtqfx.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422593/Desktop%20designs/o7azjjqu6eejxleerjvh.jpg",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/jwdtjasibuiifhfaok1h.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/lzp4ekq2zxwabvg8qj3v.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422593/Desktop%20designs/uahuwbfp4paashd8kalr.png",
+];
+export const mobileUrls = [
+  "https://res.cloudinary.com/swapng/image/upload/v1689422493/Mobile%20designs/omn3ybny66mtvwbqiyqf.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422490/Mobile%20designs/jil7pcdwxgvotjijqsmh.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422491/Mobile%20designs/bndpostlevcheb6tmkjx.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422488/Mobile%20designs/bdov4xux1lwcf3pzapl7.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422490/Mobile%20designs/ezwkduiep1taglrhgo47.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422488/Mobile%20designs/r83ejaa1qfl2ji4wkhhe.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422487/Mobile%20designs/jqq4vsepn8qe5eepofub.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422490/Mobile%20designs/kprlwkeori9bz1qj7hix.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422486/Mobile%20designs/ubycqvqzheggyitkobln.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422492/Mobile%20designs/n3in3ilkjhzvxdmvxjax.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422491/Mobile%20designs/ftjkrdjgowt3jq2prff3.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422495/Mobile%20designs/flduddwnqigfapxffjg8.png",
+  "https://res.cloudinary.com/swapng/image/upload/v1689422490/Mobile%20designs/lmz6xtdeeyfxk6rycr9r.png",
+];
