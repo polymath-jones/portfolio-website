@@ -6,7 +6,7 @@ interface Props {
 const PhoneMockup: React.FC<Props> = ({ url, className = "", style = {} }) => {
   return (
     <div
-      className={`h-fit md:min-h-[725px] w-fit overflow-hidden  relative rounded-[50px] md:rounded-[65px] ${className}`}
+      className={`h-fit md:min-h-[725px]  w-fit overflow-hidden  relative rounded-[50px] md:rounded-[65px] ${className}`}
       style={style}
     >
       <img
@@ -14,8 +14,8 @@ const PhoneMockup: React.FC<Props> = ({ url, className = "", style = {} }) => {
         className="h-full md:w-fit w-[300px]"
         alt=""
       />
-      <div className="absolute top-[50%] translate-y-[-50%]  left-0 px-1 ">
-        <img className="rounded-[70px]  max-h-full" src={url} alt="" />
+      <div className="absolute top-[50%] translate-y-[-50%] h-full  left-0 px-1 ">
+        <img className="rounded-[70px]  h-full" src={url} alt="" />
       </div>
       <img
         src="/imgs/svgs/phone-frame.svg"

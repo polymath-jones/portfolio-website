@@ -62,7 +62,7 @@ const Gallery: React.FC<Props> = ({ isOpen, setGalleryIsOpen }) => {
         </div>
 
         <div className="m-auto w-full  rounded-[20px]  md:flex-1 relative">
-          <div className=" overflow-hidden rounded-[5px] w-full  h-[750px] ">
+          <div className=" overflow-hidden rounded-[5px] w-full  h-[650px] ">
             <div className="">
               {urls.map((u, i) => (
                 <img
