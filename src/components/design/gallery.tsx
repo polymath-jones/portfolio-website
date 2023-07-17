@@ -1,4 +1,5 @@
 import { desktopUrls, mobileUrls } from "@/src/utils/interfaces";
+import { url } from "inspector";
 import { useState } from "react";
 import RoundButton from "../common/round-button";
 
@@ -30,7 +31,7 @@ const Gallery: React.FC<Props> = ({ isOpen, setGalleryIsOpen }) => {
     <div className="w-[100vw] h-[100vh] top-0 fixed cursor-pointer bg-[#000000bb] backdrop-blur-3xl z-[999999999] pt-0">
       <div className="max-w-[1500px] h-full m-auto py-[50px] px-2.5 md:px-[40px] flex flex-col gap-5">
         {/* NAV */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between pr-5 md:px-0">
           <div className="flex gap-2.5 md:gap-5 items-center justify-center">
             {["DESKTOP DESIGNS", "MOBILE DESINGS"].map((s, i) => (
               <span
@@ -71,7 +72,7 @@ const Gallery: React.FC<Props> = ({ isOpen, setGalleryIsOpen }) => {
                     i == currentImageIndex
                       ? "animate__fadeInUp"
                       : "animate__fadeOutDown"
-                  } !duration-1000 m-auto ${
+                  } !duration-500 m-auto ${
                     isMobile ? "h-full" : "w-full"
                   } object-cover left-0 right-0 `}
                 />
@@ -86,8 +87,12 @@ const Gallery: React.FC<Props> = ({ isOpen, setGalleryIsOpen }) => {
             >
               <RoundButton onclick={() => scrollRight()} />
             </div>
-            <div className="!rotate-180 !backdrop-blur-md rounded-full overflow-hidden animate__animated animate__fadeInUp !delay-1000 !duration-1000">
-              <RoundButton onclick={() => scrollLeft()} />
+            <div
+              className={`${
+                currentImageIndex == urls.length - 1 && "!opacity-30"
+              } h-fit animate__animated !backdrop-blur-md rounded-full overflow-hidden animate__fadeInDown !delay-1000 !duration-1000`}
+            >
+              <RoundButton isRight onclick={() => scrollLeft()} />
             </div>
           </div>
         </div>

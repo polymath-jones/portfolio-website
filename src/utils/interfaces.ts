@@ -3,7 +3,6 @@ export const desktopUrls = [
   "https://res.cloudinary.com/swapng/image/upload/v1689422592/Desktop%20designs/qazincjazsmveukuhqmo.png",
   "https://res.cloudinary.com/swapng/image/upload/v1689422595/Desktop%20designs/jdngv2akjhpvojwdpsih.png",
   "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/xpvtagwdwd4lvz899jls.png",
-  "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/xpvtagwdwd4lvz899jls.png",
   "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/axksqgytlxvgr5huckhl.png",
   "https://res.cloudinary.com/swapng/image/upload/v1689422593/Desktop%20designs/woz2selczohr54mjujxd.png",
   "https://res.cloudinary.com/swapng/image/upload/v1689422594/Desktop%20designs/reg83ua6avuruioxtqfx.png",

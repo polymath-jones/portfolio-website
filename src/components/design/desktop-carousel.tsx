@@ -42,8 +42,12 @@ const DesktopCarousel = () => {
         >
           <RoundButton onclick={() => scrollRight()} />
         </div>
-        <div className="!rotate-180 !backdrop-blur-md rounded-full overflow-hidden animate__animated animate__fadeInUp !delay-1000 !duration-1000">
-          <RoundButton onclick={() => scrollLeft()} />
+        <div
+          className={`${
+            currentIndex == desktopUrls.length - 1 && "!opacity-50"
+          }  h-fit animate__animated !backdrop-blur-md rounded-full overflow-hidden animate__fadeInDown !delay-1000 !duration-1000`}
+        >
+          <RoundButton isRight onclick={() => scrollLeft()} />
         </div>
       </div>
     </div>

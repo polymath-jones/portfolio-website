@@ -1,15 +1,11 @@
 import Head from "next/head";
 import "animate.css";
-import ScrollAnimation from "react-animate-on-scroll";
 import Logo from "@/src/components/common/logo";
-import PhoneMockup from "@/src/components/design/phone-mockup";
-import RoundButton from "@/src/components/common/round-button";
 import DesignCarousel from "@/src/components/design/mobile-carousel";
 import DesktopCarousel from "@/src/components/design/desktop-carousel";
 import { LinkButton } from "@/src/components/common/Link-button";
 import { useEffect, useRef, useState } from "react";
 import Gallery from "@/src/components/design/gallery";
-import Scrollbar from "smooth-scrollbar";
 
 export default function Design() {
   const [menuIsOpen, setMenuIsOpen] = useState<boolean | undefined>(undefined);
@@ -75,10 +71,10 @@ export default function Design() {
               className="text-black flex gap-5 items-center h-fit  "
               onClick={() => openGallery()}
             >
-              <span className="text-4xl shrink-0  md:text-5xl tracking-tighter leading-[1] ">
-                SEE MY
+              <span className="text-4xl shrink-0 text-left  md:text-5xl tracking-tight leading-[1] ">
+                VIEW
                 <br />
-                WORK
+                GALLERY
               </span>
               {/* prettier-ignore */}
               <svg className="relative animate__animated animate__fadeInLeft !delay-500 !duration-700" xmlns="http://www.w3.org/2000/svg" width="135" height="12" viewBox="0 0 135 12" fill="none">
@@ -146,7 +142,7 @@ export default function Design() {
 
                 <div className="absolute -bottom-10 md:-bottom-12.5 left-0 w-full animate__animated animate__fadeInUp !delay-700 !duration-1000">
                   <img
-                    src="/imgs/skills-illustration.png"
+                    src="https://res.cloudinary.com/swapng/image/upload/v1689598224/skills-illustration_rihdfr.png"
                     className="relative block max-w-[110%] translate-x-[-50%] left-[50%]"
                     alt=""
                   />
@@ -179,8 +175,8 @@ export default function Design() {
                   className="flex gap-5 items-center h-fit lg:mt-0 mt-40 px-7.5 lg:px-10"
                   onClick={() => openGallery()}
                 >
-                  <span className="text-4xl  md:text-5xl tracking-tighter leading-[1] ">
-                    VIEW <br /> MORE
+                  <span className="text-4xl text-left  md:text-5xl tracking-tight leading-[1] ">
+                    VIEW <br /> GALLERY
                   </span>
                   {/* prettier-ignore */}
                   <svg className="animate__animated animate__fadeInLeft !delay-500 !duration-700" xmlns="http://www.w3.org/2000/svg" width="135" height="12" viewBox="0 0 135 12" fill="none">
@@ -213,10 +209,10 @@ export default function Design() {
                 className="text-white flex gap-5 items-center h-fit md:mt-20 mt-20 "
                 onClick={() => openGallery()}
               >
-                <span className="text-4xl shrink-0  md:text-5xl tracking-tighter leading-[1] ">
-                  SEE MY
+                <span className="text-4xl text-left shrink-0  md:text-5xl tracking-tight leading-[1] ">
+                  VIEW
                   <br />
-                  WORK
+                  GALLERY
                 </span>
                 {/* prettier-ignore */}
                 <svg className="relative animate__animated animate__fadeInLeft !delay-500 !duration-700" xmlns="http://www.w3.org/2000/svg" width="135" height="12" viewBox="0 0 135 12" fill="none">

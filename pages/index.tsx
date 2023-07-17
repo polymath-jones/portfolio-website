@@ -45,7 +45,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="overflow-hidden flex-1 p-7.5 md:p-12.5 bg-white relative cursor-pointer">
+            <a
+              href="https://github.com/polymath-jones"
+              className="overflow-hidden block flex-1 p-7.5 md:p-12.5 bg-white relative cursor-pointer"
+            >
               <div className="flex items-center">
                 <div className="text-black  bg-white z-20 pr-7.5 text-4xl md:text-5xl flex flex-col space-y-[-7px]">
                   <h1 className="animate__animated animate__fadeInUp !delay-500 !duration-700 font-display tracking-tighter font-medium">
@@ -72,7 +75,7 @@ export default function Home() {
                   className="w-[170px] md:w-[325px] animate__animated animate__fadeInRight !delay-1000 !duration-1000"
                 />
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

@@ -45,11 +45,20 @@ const DesignCarousel = () => {
           ))}
       </div>
       <div className="flex gap-[140px] md:block absolute top-[50%] translate-y-[-50%]  md:left-[335px] md:space-y-30 z-50">
-        <div className="h-fit animate__animated !backdrop-blur-md rounded-full overflow-hidden animate__fadeInDown !delay-1000 !duration-1000">
+        <div
+          className={`${
+            currentIndex == 0 && "!opacity-30"
+          } h-fit animate__animated !backdrop-blur-md rounded-full overflow-hidden animate__fadeInDown !delay-1000 !duration-1000`}
+        >
           <RoundButton onclick={() => scrollRight()} />
         </div>
-        <div className="!rotate-180 !backdrop-blur-md rounded-full overflow-hidden animate__animated animate__fadeInUp !delay-1000 !duration-1000">
-          <RoundButton onclick={() => scrollLeft()} />
+        <div
+          style={{ transform: "rotate(180deg)" }}
+          className={`${
+            currentIndex == mobileUrls.length - 1 && "!opacity-30"
+          } h-fit animate__animated !backdrop-blur-md rounded-full overflow-hidden animate__fadeInDown !delay-1000 !duration-1000`}
+        >
+          <RoundButton isRight onclick={() => scrollLeft()} />
         </div>
       </div>
     </div>
