@@ -4,40 +4,27 @@ const Logo = () => {
   return (
     <>
       <div
-        className="flex items-center gap-2.5 select-none cursor-pointer"
+        className="flex items-center gap-2.5 select-none cursor-pointer h-5 xl:opacity-20 hover:opacity-100"
         onClick={() => router.push("/")}
       >
         <div className="flex items-center">
           {/* prettier-ignore */}
-          <svg className="animate__animated animate__fadeInLeft !duration-700" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
-            <path d="M22.8955 13.2758C22.8955 18.5884 18.5887 22.8953 13.2759 22.8953C7.96307 22.8953 3.65625 18.5884 3.65625 13.2758C3.65625 7.96308 7.96307 3.65625 13.2759 3.65625C18.5887 3.65625 22.8955 7.96308 22.8955 13.2758Z" stroke="url(#paint0_linear_922_4294)" stroke-width="7.3125"/>
-            <defs>
-                <linearGradient id="paint0_linear_922_4294" x1="10.7464" y1="-3.43763" x2="33.008" y2="18.0888" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#EBE73A"/>
-                <stop offset="0.332326" stop-color="#0DA655"/>
-                <stop offset="0.710033" stop-color="#63B5DF"/>
-                <stop offset="1" stop-color="#F84649"/>
-                </linearGradient>
-            </defs>
-            </svg>
+          <svg className="animate__animated animate__fadeIn !duration-700 h-5 !delay-300"   viewBox="0 0 20 21" fill="none">
+          <path d="M19.5388 10.4915C19.5388 15.7834 15.2489 20.0733 9.95691 20.0733C4.66496 20.0733 0.375 15.7834 0.375 10.4915C0.375 5.1996 4.66496 0.909668 9.95691 0.909668C15.2489 0.909668 19.5388 5.1996 19.5388 10.4915Z" fill="white" stroke="white" stroke-width="0.75"/>
+          </svg>
 
           {/* prettier-ignore */}
-          <svg className="animate__animated animate__fadeInLeft !delay-100 !duration-700" width="19" height="27" viewBox="0 0 19 27" fill="white" xmlns="http://www.w3.org/2000/svg">
+          <svg className="animate__animated animate__fadeIn !delay-500 !duration-700 h-5"   viewBox="0 0 19 27" fill="white">
                 <mask id="path-1-inside-1_924_236" fill="white">
                     <rect x="0.676758" y="-0.000213623" width="18.3017" height="26.7081" rx="4.21875"/>
                 </mask>
-                <rect x="0.676758" y="-0.000213623" width="18.3017" height="26.7081" rx="4.21875" stroke="black" stroke-width="14.3437" mask="url(#path-1-inside-1_924_236)"/>
+                <rect x="0.676758" y="-0.000213623" width="18.3017" height="26.7081" rx="4.21875" stroke="white" stroke-width="14.3437" mask="url(#path-1-inside-1_924_236)"/>
             </svg>
 
           {/* prettier-ignore */}
-          <svg className="animate__animated animate__fadeInLeft !delay-300 !duration-700" width="25" height="27" viewBox="0 0 25 27" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17.345 0.610221C20.3491 -1.1242 24.1043 1.04383 24.1043 4.51268V21.8196C24.1043 25.2885 20.3491 27.4565 17.345 25.7221L2.35662 17.0686C-0.647519 15.3342 -0.647519 10.9981 2.35662 9.26368L17.345 0.610221Z" fill="black"/>
+          <svg className="animate__animated animate__fadeIn !delay-700 !duration-700 h-5"  viewBox="0 0 25 27" fill="white">
+                <path d="M17.345 0.610221C20.3491 -1.1242 24.1043 1.04383 24.1043 4.51268V21.8196C24.1043 25.2885 20.3491 27.4565 17.345 25.7221L2.35662 17.0686C-0.647519 15.3342 -0.647519 10.9981 2.35662 9.26368L17.345 0.610221Z" fill="white"/>
             </svg>
-        </div>
-        <div className="animate__animated !delay-700 !duration-[2000ms] animate__fadeInLeft">
-          <span className="font-body opacity-50 text-sm  tracking-[-0.3px]">
-            Polymath-jones
-          </span>
         </div>
       </div>
     </>

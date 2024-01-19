@@ -1,21 +1,23 @@
 @font-face {
-  font-family: "CabinetGrotesk";
-  font-weight: 400 500;
-  src: url(../assets/fonts/CabinetGrotesk-Regular.otf) format("opentype"),
-    url(../assets/fonts/CabinetGrotesk-Bold.otf) format("opentype");
+  font-family: "Gasoek";
+  font-weight: 700;
+  src: url(../assets/fonts/Gasoek-Heavy.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "Helvetica";
-  font-weight: 400 500;
-  src: url(../assets/fonts/Helvetica.ttf) format("truetype"),
-    url(../assets/fonts/Helvetica-Bold.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Cyrene";
+  font-family: "FHOscar";
   font-weight: 400;
-  src: url(../assets/fonts/Cyrene-Regular.otf) format("opentype");
+  src: url(../assets/fonts/FHOscar-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FHOscar";
+  font-weight: 600;
+  src: url(../assets/fonts/FHOscar-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "FHOscar";
+  font-weight: 700;
+  src: url(../assets/fonts/FHOscar-Bold.ttf) format("truetype");
 }
 
 @import "tailwindcss/base";
@@ -30,7 +32,7 @@
 
 html,
 body {
-  background-color: white;
+  background-color: #121212;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -55,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cyrene";
+  font-family: "FHOscar";
 }
 
 td,
@@ -121,3 +123,16 @@ input::placeholder {
     border-color: #1a8224 !important;
   }
 }
+
+.wrap-text {
+  text-wrap: wrap;
+}
+
+.app-shadow{
+  filter: brightness(0) saturate(100%) invert(70%) sepia(97%) saturate(0%) hue-rotate(353deg)  brightness(0%) contrast(102%);
+}
+
+
+// img {
+//   max-width: max-content;
+// }

@@ -28,5 +28,11 @@ function getFieldvalues(name: string, form: FormikProps<any>, type: "text" | "nu
     };
   }
 
+
+
+  export const getElem = (query: string) => {
+    return document.querySelector(query) as HTMLElement;
+  };
+
   
   export {getFieldvalues}

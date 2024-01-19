@@ -4,9 +4,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      body: ["Helvetica", "Open Sans"],
-      display: ["CabinetGrotesk", "Open Sans"],
-      display2: ["Cyrene", "Open Sans"],
+      display: ["Gasoek", "Open Sans"],
+      body: ["FHOscar", "Open Sans"],
     },
     container: {
       center: true,
@@ -16,8 +15,9 @@ module.exports = {
       },
     },
     extend: {
-      outline: {
-        primary: "1px solid ##1A8224",
+      screens: {
+        xs: "500px",
+        "2md": "900px",
       },
       spacing: {
         0.75: "0.1875rem",
@@ -42,6 +42,19 @@ module.exports = {
       },
 
       colors: {
+        dark: {
+          black: "#121212",
+          "black-200": "#171717",
+        },
+        gray: {
+          dark: "#4C4C4C",
+          darker: "#1E1E1E",
+          normal: "#696969",
+        },
+        outline: {
+          black: "#212121",
+          dark: "#323232",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -86,20 +99,6 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
