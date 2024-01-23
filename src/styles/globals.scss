@@ -132,7 +132,9 @@ input::placeholder {
   filter: brightness(0) saturate(100%) invert(70%) sepia(97%) saturate(0%) hue-rotate(353deg)  brightness(0%) contrast(102%);
 }
 
-
+.juk-controls:hover .juk-buttons{
+  display: flex;
+}
 // img {
 //   max-width: max-content;
 // }
