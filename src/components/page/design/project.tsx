@@ -207,10 +207,12 @@ const Project: React.FC<Props> = ({ data, index }) => {
               )}
             </button>
 
-            <button className="flex items-center h-[33px] text-dark-black bg-white  hover:border-gray-dark text-xs sm:text-sm border border-outline-black rounded-full gap-2.5 p-2.5 font-body">
-              <a target="_blank" className="uppercase" href={casestudy}>
-                CASE STUDY
-              </a>
+            <a
+              target="_blank"
+              href={casestudy}
+              className="flex items-center h-[33px] text-dark-black bg-white  hover:border-gray-dark text-xs sm:text-sm border border-outline-black rounded-full gap-2.5 p-2.5 font-body"
+            >
+              <span className="uppercase">CASE STUDY</span>
               <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
                 <path
                   fill-rule="evenodd"
@@ -219,7 +221,7 @@ const Project: React.FC<Props> = ({ data, index }) => {
                   fill="currentColor"
                 />
               </svg>
-            </button>
+            </a>
           </div>
         </header>
         <section className="client overflow-hidden h-fit flex-shrink flex-grow-0">
