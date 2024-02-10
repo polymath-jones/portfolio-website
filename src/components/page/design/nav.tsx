@@ -24,16 +24,12 @@ const TopNav: React.FC<Props> = () => {
 export default TopNav;
 
 const linkData = [
-  // {
-  //   label: "JUKSTAPOZED",
-  //   url: "",
-  // },
   {
     label: "BEHANCE",
-    url: "",
+    url: "https://www.behance.net/kayodeejisun",
   },
   {
     label: "CONTACT",
-    url: "",
+    url: "https://www.linkedin.com/in/kayode-ejisun/",
   },
 ];

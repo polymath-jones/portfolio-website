@@ -28,6 +28,7 @@ const Project: React.FC<Props> = ({ data, index }) => {
   const root = useRef(null);
   const { width, height } = useScreenSize();
   const isMd = width <= 1024;
+  const [imagesLoaded, setImagesLoaded] = useState(0);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -163,7 +164,7 @@ const Project: React.FC<Props> = ({ data, index }) => {
     }, root);
 
     return () => ctx.revert();
-  }, [width]);
+  }, [width, imagesLoaded]);
 
   return (
     <section ref={root} className="mt-[30px] md:mt-[150px]">
@@ -191,7 +192,7 @@ const Project: React.FC<Props> = ({ data, index }) => {
                   link.color === "green" ? "bg-green-400" : "bg-orange-400"
                 }`}
               ></div>
-              <a className="uppercase" href={link.url}>
+              <a className="uppercase" href={link.url} target="_blank">
                 {link.label}
               </a>
               {link.url && (
@@ -207,7 +208,7 @@ const Project: React.FC<Props> = ({ data, index }) => {
             </button>
 
             <button className="flex items-center h-[33px] text-dark-black bg-white  hover:border-gray-dark text-xs sm:text-sm border border-outline-black rounded-full gap-2.5 p-2.5 font-body">
-              <a className="uppercase" href={casestudy}>
+              <a target="_blank" className="uppercase" href={casestudy}>
                 CASE STUDY
               </a>
               <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
@@ -275,6 +276,7 @@ const Project: React.FC<Props> = ({ data, index }) => {
                 i !== 0 && (
                   <div key={i} className="w-fit flex-shrink-0 h-full">
                     <img
+                      onLoad={() => setImagesLoaded(imagesLoaded + 1)}
                       className={`${
                         !isMobile ? "max-w-max h-[60%] lg:h-full " : "h-full"
                       }`}

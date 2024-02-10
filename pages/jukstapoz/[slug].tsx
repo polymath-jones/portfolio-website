@@ -120,8 +120,7 @@ const Juksta: React.FC<Props> = ({ slug }) => {
           )}
         </div>
         <p className="m-auto text-center md:text-base sm:text-sm  mt-10 uppercase text-white text-opacity-40 tracking-wider font-medium text-sm max-w-[500px]">
-          discover new possibilities & experiment with different combinations of
-          design elements and styles.
+        Jukstapoz generates unique, random design prompts, challenging you to explore new concepts and push your creative boundaries. 
         </p>
       </section>
     </main>

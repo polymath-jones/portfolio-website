@@ -17,7 +17,7 @@ const TopNav: React.FC<Props> = ({ isGenerated = false }) => {
      router.push("/jukstapoz/")
   }
   return (
-    <div className="pt-5 xs:pt-10 sm:pt-[65px] flex items-center justify-between">
+    <div className="pt-5 xs:pt-10 sm:pt-[40px] flex items-center justify-between">
       {!isGenerated&&<div className="flex flex-col sm:flex-row gap-1.25 sm:items-center h-fit max-w-[300px]   w-[100px] md:flex-1">
         {linkData.map((l, i) => (
           <button
@@ -41,7 +41,7 @@ const TopNav: React.FC<Props> = ({ isGenerated = false }) => {
           {logo}
           <div className="flex flex-col items-center">
             <span className="font-body tracking-wider text-white text-opacity-30 text-sm max-w-[80px] block">
-              DESIGN IDEA GENERATOR
+              DESIGN PROMPT GENERATOR
             </span>
           </div>
           <div className="w-[1px] h-[80%] opacity-10 bg-white absolute mx-auto left-0 right-0 bottom-0"></div>
@@ -64,12 +64,12 @@ export default TopNav;
 
 const linkData = [
   {
-    label: "GITHUB",
-    url: "",
+    label: "ABOUT ME",
+    url: "/",
   },
   {
-    label: "CASE STUDY",
-    url: "",
+    label: "GITHUB",
+    url: "https://github.com/polymath-jones",
   },
 ];
 

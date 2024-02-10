@@ -7,8 +7,7 @@ const Jukstapoz = () => {
       <section className="max-w-[1320px] m-auto ">
         <TopNav />
         <p className="m-auto text-center mt-5 md:mt-10 uppercase text-white text-opacity-40 tracking-wider font-medium text-xs sm:text-sm max-w-[500px]">
-          discover new possibilities & experiment with different combinations of
-          design elements and styles.
+          Jukstapoz generates unique, random design prompts, challenging you to explore new concepts and push your creative boundaries. 
         </p>
         <JukstaBoard />
       </section>
