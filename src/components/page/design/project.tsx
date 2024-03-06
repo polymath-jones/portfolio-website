@@ -278,7 +278,10 @@ const Project: React.FC<Props> = ({ data, index }) => {
                 i !== 0 && (
                   <div key={i} className="w-fit flex-shrink-0 h-full">
                     <img
-                      onLoad={() => setImagesLoaded(imagesLoaded + 1)}
+                      onLoad={() =>
+                        i === images.length - 1&&
+                        setImagesLoaded(imagesLoaded + 1)
+                      }
                       className={`${
                         !isMobile ? "max-w-max h-[60%] lg:h-full " : "h-full"
                       }`}
